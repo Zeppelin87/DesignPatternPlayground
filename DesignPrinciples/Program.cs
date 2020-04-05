@@ -14,6 +14,7 @@ namespace DesignPrinciples
             SingleResponsibilityPrinciple.Run();
             OpenClosedPrinciple.Run();
             LiskovSubstitutionPrinciple.Run();
+            InterfaceSegregationPrinciple.Run();
         }
     }
 }
