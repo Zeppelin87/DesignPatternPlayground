@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using DesignPrinciples.Principles;
 
 namespace DesignPrinciples
 {
@@ -7,20 +6,13 @@ namespace DesignPrinciples
     {
         static void Main(string[] args)
         {
-            SingleResponsibilityPrinciple();
+            RunPrinciples();
         }
 
-        private static void SingleResponsibilityPrinciple()
+        private static void RunPrinciples()
         {
-            var journal = new Journal();
-            journal.AddEntry("I ate food.");
-            journal.AddEntry("I went for a run.");
-            Console.WriteLine(journal);
-
-            var persistence = new Persistence();
-            var filename = @"c:\temp\journal.txt";
-            persistence.SaveToFile(journal, filename, true);
-            Process.Start(filename);
+            //SingleResponsibilityPrinciple.Run();
+            OpenClosedPrinciple.Run();
         }
     }
 }
