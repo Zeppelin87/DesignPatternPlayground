@@ -1,13 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SingleResponsibilityPrinciple
 {
-    // Any class should have one reason to change.
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var journal = new Journal();
+            journal.AddEntry("I ate food.");
+            journal.AddEntry("I went for a run.");
+            Console.WriteLine(journal);
+
+            var persistence = new Persistence();
+            var filename = @"c:\temp\journal.txt";
+            persistence.SaveToFile(journal, filename, true);
+            Process.Start(filename);
+        }
+    }
 
     public class Journal
     {
@@ -29,26 +41,21 @@ namespace SingleResponsibilityPrinciple
         {
             return string.Join(Environment.NewLine, entries);
         }
-
-        public void Save(string filename)
-        {
-            File.WriteAllText(filename, ToString());
-        }
-
-        private static Journal Load(string filename)
-        {
-            return new Journal();
-        }
     }
 
-    class Program
+    public class Persistence
     {
-        static void Main(string[] args)
+        public void SaveToFile(Journal journal, string filename, bool overwrite = false)
         {
-            var journal = new Journal();
-            journal.AddEntry("I ate food.");
-            journal.AddEntry("I went for a run.");
-            Console.WriteLine(journal);
+            if (overwrite || !File.Exists(filename))
+            {
+                File.WriteAllText(filename, journal.ToString());
+            }
+        }
+
+        public static Journal Load(string filename)
+        {
+            return new Journal();
         }
     }
 }
