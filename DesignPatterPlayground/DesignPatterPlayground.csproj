@@ -44,6 +44,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOLID Design Principles\DependecyInversionPrinciple.cs" />
+    <Compile Include="SOLID Design Principles\InterfaceSegregationPrinciple.cs" />
+    <Compile Include="SOLID Design Principles\LiskovSubstitutionPrinciple.cs" />
+    <Compile Include="SOLID Design Principles\OpenClosedPrinciple.cs" />
+    <Compile Include="SOLID Design Principles\SingleResponsibilityPrinciple.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPrinciples.Principles
+namespace DesignPatterPlayground.SOLID_Design_Principles
 {
     // Average example - look elsewhere...
     public static class LiskovSubstitutionPrinciple

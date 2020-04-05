@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DesignPatterPlayground.SOLID_Design_Principles;
 
 namespace DesignPatterPlayground
 {
@@ -10,7 +6,16 @@ namespace DesignPatterPlayground
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello world");
+            RunSOLIDPrinciples();
+        }
+
+        private static void RunSOLIDPrinciples()
+        {
+            SingleResponsibilityPrinciple.Run();
+            OpenClosedPrinciple.Run();
+            LiskovSubstitutionPrinciple.Run();
+            InterfaceSegregationPrinciple.Run();
+            DependecyInversionPrinciple.Run();
         }
     }
 }
