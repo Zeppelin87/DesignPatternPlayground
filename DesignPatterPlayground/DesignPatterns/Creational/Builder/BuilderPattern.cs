@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace DesignPatterPlayground.DesignPatterns.Creational
+namespace DesignPatterPlayground.DesignPatterns.Creational.Builder
 {
     public static class BuilderPattern
     {
@@ -52,7 +54,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational
             return parentElement.ToString();
         }
     }
-    
+
     public class HtmlElement
     {
         private const int indentSize = 2;
