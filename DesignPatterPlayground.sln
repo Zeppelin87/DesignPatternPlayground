@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterPlayground", "DesignPatterPlayground\DesignPatterPlayground.csproj", "{A266DE59-C637-47F8-842B-E231BED03F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibilityPrinciple", "SingleResponsibilityPrinciple\SingleResponsibilityPrinciple.csproj", "{34B8F396-821B-45A8-98E4-70CF0C92E1EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89A54199-9D1D-46D1-BA6C-EFDA794FD897}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A266DE59-C637-47F8-842B-E231BED03F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A266DE59-C637-47F8-842B-E231BED03F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A266DE59-C637-47F8-842B-E231BED03F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A266DE59-C637-47F8-842B-E231BED03F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B8F396-821B-45A8-98E4-70CF0C92E1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B8F396-821B-45A8-98E4-70CF0C92E1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B8F396-821B-45A8-98E4-70CF0C92E1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B8F396-821B-45A8-98E4-70CF0C92E1EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4716248-5FE5-457A-83B2-2F30321611AE}
+	EndGlobalSection
+EndGlobal
