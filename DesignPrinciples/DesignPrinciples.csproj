@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Principles\LiskovSubstitutionPrinciple.cs" />
     <Compile Include="Principles\OpenClosedPrinciple.cs" />
     <Compile Include="Principles\SingleResponsibilityPrinciple.cs" />
     <Compile Include="Program.cs" />

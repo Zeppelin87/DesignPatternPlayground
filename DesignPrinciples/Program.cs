@@ -11,8 +11,9 @@ namespace DesignPrinciples
 
         private static void RunPrinciples()
         {
-            //SingleResponsibilityPrinciple.Run();
+            SingleResponsibilityPrinciple.Run();
             OpenClosedPrinciple.Run();
+            LiskovSubstitutionPrinciple.Run();
         }
     }
 }
