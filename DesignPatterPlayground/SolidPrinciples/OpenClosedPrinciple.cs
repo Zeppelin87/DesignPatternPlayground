@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DesignPatterPlayground.SOLID_Design_Principles
+namespace DesignPatterPlayground.SolidPrinciples
 {
     public static class OpenClosedPrinciple
     {

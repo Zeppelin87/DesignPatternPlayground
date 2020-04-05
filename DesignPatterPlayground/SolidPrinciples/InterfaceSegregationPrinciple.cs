@@ -1,4 +1,10 @@
-﻿namespace DesignPatterPlayground.SOLID_Design_Principles
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DesignPatterPlayground.SolidPrinciples
 {
     public static class InterfaceSegregationPrinciple
     {

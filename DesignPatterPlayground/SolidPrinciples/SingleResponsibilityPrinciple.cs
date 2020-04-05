@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace DesignPatterPlayground.SOLID_Design_Principles
+namespace DesignPatterPlayground.SolidPrinciples
 {
     public static class SingleResponsibilityPrinciple
     {

@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DesignPatterPlayground.SOLID_Design_Principles
+namespace DesignPatterPlayground.SolidPrinciples
 {
     // Average example - look elsewhere...
     public static class DependecyInversionPrinciple
