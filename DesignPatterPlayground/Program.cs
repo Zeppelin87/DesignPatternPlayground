@@ -22,8 +22,9 @@ namespace DesignPatterPlayground
 
         private static void RunCreationalPatterns()
         {
-            Builder.Run();
-            FluentBuilderInheritance.Run();
+            //Builder.Run();
+            //FluentBuilderInheritance.Run();
+            FunctionalBuilder.Run();
         }
     }
 }
