@@ -22,7 +22,7 @@ namespace DesignPatterPlayground
 
         private static void RunCreationalPatterns()
         {
-            BuilderPattern.Run();
+            Builder.Run();
         }
     }
 }

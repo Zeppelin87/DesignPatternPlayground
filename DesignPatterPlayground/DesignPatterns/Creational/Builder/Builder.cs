@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterPlayground.DesignPatterns.Creational.Builder
 {
-    public static class BuilderPattern
+    public static class Builder
     {
         public static void Run()
         {
@@ -20,8 +18,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Builder
 
             // Example - Involved
             var builder = new HtmlBuilder("ul");
-            builder.AddChild("li", "Hello");
-            builder.AddChild("li", "World");
+            builder.AddChild("li", "Hello").AddChild("li", "World");
             Console.WriteLine(builder.ToString()); // output: <ul><li>Hello</li><li>World</li></ul>
         }
     }
@@ -38,10 +35,11 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Builder
             parentElement.Tag = parentTag;
         }
 
-        public void AddChild(string tag, string text)
+        public HtmlBuilder AddChild(string tag, string text)
         {
             var childHtmlElement = new HtmlElement(tag, text);
-            parentElement.ChildHtmlElements.Add(childHtmlElement); // 6:30
+            parentElement.ChildHtmlElements.Add(childHtmlElement);
+            return this;
         }
 
         public void Clear()
