@@ -46,6 +46,7 @@
     <Compile Include="DesignPatterns\Creational\Builder\FacetedBuilder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FluentBuilderInheritance.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FunctionalBuilder.cs" />
+    <Compile Include="DesignPatterns\Creational\Factory\PointerExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolidPrinciples\DependecyInversionPrinciple.cs" />
@@ -57,8 +58,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DesignPatterns\Creational\Factory\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

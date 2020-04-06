@@ -30,8 +30,10 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Builder
         public override string ToString()
         {
             return $"{nameof(this.StreetAddress)}: {this.StreetAddress}," +
-                $" {nameof(this.PostalCode)}: {this.PostalCode}, {nameof(this.City)}: {this.City}," +
-                $"{nameof(this.CompanyName)}: {this.CompanyName}, {nameof(this.Position)}: {this.Position}," +
+                $" {nameof(this.PostalCode)}: {this.PostalCode}," +
+                $" {nameof(this.City)}: {this.City}," +
+                $"{nameof(this.CompanyName)}: {this.CompanyName}," +
+                $" {nameof(this.Position)}: {this.Position}," +
                 $" {nameof(this.AnnualIncome)}: {this.AnnualIncome}";
         }
     }
