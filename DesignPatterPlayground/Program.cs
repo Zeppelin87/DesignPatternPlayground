@@ -7,7 +7,7 @@ namespace DesignPatterPlayground
     {
         static void Main(string[] args)
         {
-            RunSOLIDPrinciples();
+            //RunSOLIDPrinciples();
             RunCreationalPatterns();
         }
 
@@ -23,6 +23,7 @@ namespace DesignPatterPlayground
         private static void RunCreationalPatterns()
         {
             Builder.Run();
+            FluentBuilderInheritance.Run();
         }
     }
 }
