@@ -2,7 +2,7 @@
 
 namespace DesignPatterPlayground.DesignPatterns.Creational.Factory
 {
-    public static class PointerExample
+    public static class FactoryMethod
     {
         public static void Run()
         {
@@ -17,9 +17,6 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Factory
     public class Point
     {
         // factory method
-        // The factory method allows you to have multiple methods with the same method signature that carry out different operations.
-        // This allows the same object to be created in different ways.
-        // This also makes object creation clear to the user.
         public static Point NewCartesianPoint(double x, double y)
         {
             return new Point(x, y);

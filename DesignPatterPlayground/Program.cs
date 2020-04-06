@@ -1,5 +1,6 @@
 ﻿using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
+using DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample;
 using DesignPatterPlayground.SolidPrinciples;
 
 namespace DesignPatterPlayground
@@ -43,7 +44,8 @@ namespace DesignPatterPlayground
 
         private static void FactoryExamples()
         {
-            PointerExample.Run();
+            //FactoryMethod.Run();
+            Factory.Run();
         }
 
         #endregion
