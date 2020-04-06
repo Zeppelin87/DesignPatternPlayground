@@ -1,6 +1,7 @@
 ﻿using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample;
+using DesignPatterPlayground.DesignPatterns.Creational.Factory.InnerFactoryExample;
 using DesignPatterPlayground.SolidPrinciples;
 
 namespace DesignPatterPlayground
@@ -15,8 +16,16 @@ namespace DesignPatterPlayground
 
         private static void CreationalPatterns()
         {
-            //BuilderPatterns();
-            FactoryExamples();
+            // Builder Patterns
+            //Builder.Run();
+            //FluentBuilderInheritance.Run();
+            //FunctionalBuilder.Run();
+            //FacetedBuilder.Run();
+
+            // Factory Patterns
+            //FactoryMethod.Run();
+            //Factory.Run();
+            InnerFactory.Run();
         }
 
         #region S.O.I.L.D. Principles
@@ -28,24 +37,6 @@ namespace DesignPatterPlayground
             LiskovSubstitutionPrinciple.Run();
             InterfaceSegregationPrinciple.Run();
             DependecyInversionPrinciple.Run();
-        }
-
-        #endregion
-
-        #region Creational Builders
-
-        private static void BuilderPatterns()
-        {
-            Builder.Run();
-            FluentBuilderInheritance.Run();
-            FunctionalBuilder.Run();
-            FacetedBuilder.Run();
-        }
-
-        private static void FactoryExamples()
-        {
-            //FactoryMethod.Run();
-            Factory.Run();
         }
 
         #endregion
