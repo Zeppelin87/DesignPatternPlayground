@@ -24,7 +24,8 @@ namespace DesignPatterPlayground
         {
             //Builder.Run();
             //FluentBuilderInheritance.Run();
-            FunctionalBuilder.Run();
+            //FunctionalBuilder.Run();
+            FacetedBuilder.Run();
         }
     }
 }
