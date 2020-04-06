@@ -6,20 +6,16 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Builder
     {
         public static void Run()
         {
-            var builder = new DogBuilder();
-            Dog dog = builder
+            var builder = new UserBuilder();
+            User user = builder
                 .Works.At("Google").AsA("Engineer").Earning(50)
-                .Lives.At("123 Dog Blvd").In("Eden Prairie").WithPostalCode("55463");
+                .Lives.At("123 Usr Blvd").In("New York").WithPostalCode("55463");
 
-            Console.WriteLine(dog);
+            Console.WriteLine(user);
         }
     }
 
-    // Using 'Dog' because using 'Person' will cause naming collisions.
-    // We make 2 builder facades
-    // 1. A facade for building address information
-    // 2. A facade for building employment information
-    public class Dog
+    public class User
     {
         // address
         public string StreetAddress { get; set; }
@@ -38,71 +34,69 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Builder
         }
     }
 
-    // This is a facade - which doesn't build up 'Dog' directly.
-    // Instead it acts as a facade for our other builders.
-    public class DogBuilder
+    // This is a facade for the 2 other builders.
+    public class UserBuilder
     {
-        protected Dog Dog = new Dog();
+        protected User user = new User();
 
-        public DogJobBuilder Works => new DogJobBuilder(Dog);
-        public DogAddressBuilder Lives => new DogAddressBuilder(Dog);
+        public UserJobBuilder Works => new UserJobBuilder(user);
+        public UserAddressBuilder Lives => new UserAddressBuilder(user);
 
         // Implicit conversion operator.
-        public static implicit operator Dog(DogBuilder builder)
+        public static implicit operator User(UserBuilder builder)
         {
-            return builder.Dog;
+            return builder.user;
         }
     }
 
-    // Builds employment information for a 'Dog' object.
-    public class DogJobBuilder : DogBuilder
+    public class UserJobBuilder : UserBuilder
     {
-        public DogJobBuilder(Dog dog)
+        public UserJobBuilder(User user)
         {
-            Dog = dog;
+            base.user = user;
         }
 
-        public DogJobBuilder At(string companyName)
+        public UserJobBuilder At(string companyName)
         {
-            Dog.CompanyName = companyName;
+            user.CompanyName = companyName;
             return this;
         }
 
-        public DogJobBuilder AsA(string position)
+        public UserJobBuilder AsA(string position)
         {
-            Dog.Position = position;
+            user.Position = position;
             return this;
         }
 
-        public DogJobBuilder Earning(int annualIncome)
+        public UserJobBuilder Earning(int annualIncome)
         {
-            Dog.AnnualIncome = annualIncome;
+            user.AnnualIncome = annualIncome;
             return this;
         }
     }
 
-    public class DogAddressBuilder : DogBuilder
+    public class UserAddressBuilder : UserBuilder
     {
-        public DogAddressBuilder(Dog dog)
+        public UserAddressBuilder(User user)
         {
-            Dog = dog;
+            base.user = user;
         }
 
-        public DogAddressBuilder At(string streetAddress)
+        public UserAddressBuilder At(string streetAddress)
         {
-            Dog.StreetAddress = streetAddress;
+            user.StreetAddress = streetAddress;
             return this;
         }
 
-        public DogAddressBuilder WithPostalCode(string postalCode)
+        public UserAddressBuilder WithPostalCode(string postalCode)
         {
-            Dog.PostalCode = postalCode;
+            user.PostalCode = postalCode;
             return this;
         }
 
-        public DogAddressBuilder In(string city)
+        public UserAddressBuilder In(string city)
         {
-            Dog.City = city;
+            user.City = city;
             return this;
         }
     }
