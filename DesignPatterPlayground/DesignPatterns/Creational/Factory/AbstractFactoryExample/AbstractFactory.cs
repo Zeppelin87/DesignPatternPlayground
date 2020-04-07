@@ -13,11 +13,13 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFacto
         }
     }
 
+    // Product
     public interface IHotDrink
     {
         void Consume();
     }
 
+    // Concrete Product
     internal class Tea : IHotDrink
     {
         public void Consume()
@@ -26,6 +28,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFacto
         }
     }
 
+    // Concrete Product
     internal class Coffee : IHotDrink
     {
         public void Consume()
@@ -34,11 +37,13 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFacto
         }
     }
 
+    // Creator 
     public interface IHotDrinkFactory
     {
         IHotDrink Prepare(int amount);
     }
 
+    // Concrete Creator
     internal class TeaFactory : IHotDrinkFactory
     {
         public IHotDrink Prepare(int amount)
@@ -48,6 +53,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFacto
         }
     }
 
+    // Concrete Creator
     internal class CoffeeFactory : IHotDrinkFactory
     {
         public IHotDrink Prepare(int amount)
@@ -57,6 +63,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFacto
         }
     }
 
+    // 'Provider'
     public class HotDrinkMachine
     {
         public enum AvailableDrink
