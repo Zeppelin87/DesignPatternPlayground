@@ -1,5 +1,6 @@
 ﻿using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
+using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.InnerFactoryExample;
 using DesignPatterPlayground.SolidPrinciples;
@@ -25,7 +26,8 @@ namespace DesignPatterPlayground
             // Factory Patterns
             //FactoryMethod.Run();
             //Factory.Run();
-            InnerFactory.Run();
+            //InnerFactory.Run();
+            AbstractFactory.Run();
         }
 
         #region S.O.I.L.D. Principles
