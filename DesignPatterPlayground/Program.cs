@@ -17,13 +17,13 @@ namespace DesignPatterPlayground
 
         private static void CreationalPatterns()
         {
-            // Builder Patterns
+            // 1. Builder Patterns
             //Builder.Run();
             //FluentBuilderInheritance.Run();
             //FunctionalBuilder.Run();
             //FacetedBuilder.Run();
 
-            // Factory Patterns
+            // 2. Factory Patterns
             //FactoryMethod.Run();
             //Factory.Run();
             //InnerFactory.Run();
