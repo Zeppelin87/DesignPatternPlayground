@@ -50,6 +50,7 @@
     <Compile Include="DesignPatterns\Creational\Factory\FactoryExample\Factory.cs" />
     <Compile Include="DesignPatterns\Creational\Factory\FactoryMethod.cs" />
     <Compile Include="DesignPatterns\Creational\Factory\InnerFactoryExample\InnerFactory.cs" />
+    <Compile Include="DesignPatterns\Creational\Prototype\ICloneableIsBad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolidPrinciples\DependecyInversionPrinciple.cs" />

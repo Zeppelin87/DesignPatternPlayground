@@ -3,6 +3,7 @@ using DesignPatterPlayground.DesignPatterns.Creational.Factory;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.InnerFactoryExample;
+using DesignPatterPlayground.DesignPatterns.Creational.Prototype;
 using DesignPatterPlayground.SolidPrinciples;
 
 namespace DesignPatterPlayground
@@ -17,17 +18,20 @@ namespace DesignPatterPlayground
 
         private static void CreationalPatterns()
         {
-            // 1. Builder Patterns
+            // 1. Builder Design Patterns
             //Builder.Run();
             //FluentBuilderInheritance.Run();
             //FunctionalBuilder.Run();
             //FacetedBuilder.Run();
 
-            // 2. Factory Patterns
+            // 2. Factory Design Patterns
             //FactoryMethod.Run();
             //Factory.Run();
             //InnerFactory.Run();
-            AbstractFactory.Run();
+            //AbstractFactory.Run();
+
+            // 3. Prototype Design Patterns
+            ICloneableIsBad.Run();
         }
 
         #region S.O.I.L.D. Principles
