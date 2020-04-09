@@ -4,6 +4,7 @@ using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryEx
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.InnerFactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Prototype;
+using DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyConstructorsExample;
 using DesignPatterPlayground.SolidPrinciples;
 
 namespace DesignPatterPlayground
@@ -31,7 +32,8 @@ namespace DesignPatterPlayground
             //AbstractFactory.Run();
 
             // 3. Prototype Design Patterns
-            ICloneableIsBad.Run();
+            //ICloneableIsBad.Run();
+            CopyConstructors.Run();
         }
 
         #region S.O.I.L.D. Principles
