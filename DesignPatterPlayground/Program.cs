@@ -8,6 +8,7 @@ using DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyConstructor
 using DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyThroughSerializationExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDeepCopyInterfaceExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonImplementationExample;
+using DesignPatterPlayground.DesignPatterns.Creational.Singleton.TestabilityIssuesExample;
 using DesignPatterPlayground.SolidPrinciples;
 
 namespace DesignPatterPlayground
@@ -41,7 +42,8 @@ namespace DesignPatterPlayground
             //CopyThroughSerialization.Run();
 
             // 4. Singleton Design Patterns
-            SingletonImplementation.Run();
+            //SingletonImplementation.Run();
+            TestabilityIssues.Run();
         }
 
         #region S.O.I.L.D. Principles
