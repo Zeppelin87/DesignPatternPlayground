@@ -64,6 +64,7 @@
     <Compile Include="DesignPatterns\Creational\Prototype\CopyThroughSerializationExample\CopyThroughSerialization.cs" />
     <Compile Include="DesignPatterns\Creational\Prototype\ExplicitDeepCopyInterfaceExample\ExplicitDeepCopyInterface.cs" />
     <Compile Include="DesignPatterns\Creational\Prototype\ICloneableIsBad.cs" />
+    <Compile Include="DesignPatterns\Creational\Singleton\SingletonDependencyInjectionExample\SingletonDependencyInjection.cs" />
     <Compile Include="DesignPatterns\Creational\Singleton\SingletonImplementationExample\SingletonImplementation.cs" />
     <Compile Include="DesignPatterns\Creational\Singleton\TestabilityIssuesExample\TestabilityIssues.cs" />
     <Compile Include="Program.cs" />
