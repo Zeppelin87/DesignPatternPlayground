@@ -51,6 +51,7 @@
     <Compile Include="DesignPatterns\Creational\Factory\FactoryMethod.cs" />
     <Compile Include="DesignPatterns\Creational\Factory\InnerFactoryExample\InnerFactory.cs" />
     <Compile Include="DesignPatterns\Creational\Prototype\CopyConstructorsExample\CopyConstructors.cs" />
+    <Compile Include="DesignPatterns\Creational\Prototype\ExplicitDeepCopyInterfaceExample\ExplicitDeepCopyInterface.cs" />
     <Compile Include="DesignPatterns\Creational\Prototype\ICloneableIsBad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
