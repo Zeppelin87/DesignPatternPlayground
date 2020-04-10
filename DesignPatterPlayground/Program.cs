@@ -10,6 +10,7 @@ using DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDeepCop
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonDependencyInjectionExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonImplementationExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.TestabilityIssuesExample;
+using DesignPatterPlayground.DesignPatterns.Structural.Adapter.AdapterCachingExample;
 using DesignPatterPlayground.DesignPatterns.Structural.Adapter.VectorRasterExample;
 using DesignPatterPlayground.SolidPrinciples;
 
@@ -59,7 +60,8 @@ namespace DesignPatterPlayground
         private static void Structural()
         {
             // 1. Adapter
-            VectorRasterDemo.Run();
+            //VectorRasterDemo.Run();
+            AdapterCaching.Run();
         }
 
         #endregion
