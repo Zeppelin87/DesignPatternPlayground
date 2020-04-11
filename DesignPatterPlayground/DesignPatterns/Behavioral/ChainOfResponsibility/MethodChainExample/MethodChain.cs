@@ -12,7 +12,7 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
             var root = new CreatureModifier(goblin);
 
             // Stops chain of command since Handle() doesn't call base.Handle()
-            root.Add(new NoBonusesModifier(goblin));
+            //root.Add(new NoBonusesModifier(goblin));
 
             Console.WriteLine("Let's double goblin's attack...");
             root.Add(new DoubleAttackModifier(goblin));
@@ -33,14 +33,16 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
 
         public Creature(string name, int attack, int defense)
         {
-            Name = name ?? throw new ArgumentNullException(paramName: nameof(name));
+            Name = name;
             Attack = attack;
             Defense = defense;
         }
 
         public override string ToString()
         {
-            return $"{nameof(Name)}: {Name}, {nameof(Attack)}: {Attack}, {nameof(Defense)}: {Defense}";
+            return $"{nameof(Name)}: {Name}, " +
+                $"{nameof(Attack)}: {Attack}, " +
+                $"{nameof(Defense)}: {Defense}";
         }
     }
 
@@ -52,7 +54,7 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
 
         public CreatureModifier(Creature creature)
         {
-            this.creature = creature ?? throw new ArgumentNullException(paramName: nameof(creature));
+            this.creature = creature;
         }
 
         public void Add(CreatureModifier cm)

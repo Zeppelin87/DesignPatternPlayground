@@ -1,4 +1,5 @@
-﻿using DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.MethodChainExample;
+﻿using DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.BrokerChainExample;
+using DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.MethodChainExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample;
@@ -75,7 +76,8 @@ namespace DesignPatterPlayground
         private static void Behavioral()
         {
             // 1. Chain of Responsibility
-            MethodChain.Run();
+            //MethodChain.Run();
+            BrokerChain.Run();
         }
 
         #endregion
