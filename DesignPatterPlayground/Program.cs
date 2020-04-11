@@ -1,4 +1,5 @@
-﻿using DesignPatterPlayground.DesignPatterns.Creational.Builder;
+﻿using DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.MethodChainExample;
+using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample;
@@ -23,7 +24,8 @@ namespace DesignPatterPlayground
         {
             //SOLIDPrinciples();
             //Creational();
-            Structural();
+            //Structural();
+            Behavioral();
         }
 
         #region Creational
@@ -61,9 +63,19 @@ namespace DesignPatterPlayground
         private static void Structural()
         {
             // 1. Adapter
-            //VectorRasterDemo.Run();
-            //AdapterCaching.Run();
+            VectorRasterDemo.Run();
+            AdapterCaching.Run();
             GenericValueAdapter.Run();
+        }
+
+        #endregion
+
+        #region Behavioral
+
+        private static void Behavioral()
+        {
+            // 1. Chain of Responsibility
+            MethodChain.Run();
         }
 
         #endregion
