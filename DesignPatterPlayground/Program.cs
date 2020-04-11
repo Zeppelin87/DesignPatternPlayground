@@ -11,6 +11,7 @@ using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonDepend
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonImplementationExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.TestabilityIssuesExample;
 using DesignPatterPlayground.DesignPatterns.Structural.Adapter.AdapterCachingExample;
+using DesignPatterPlayground.DesignPatterns.Structural.Adapter.GenericValueAdapterExample;
 using DesignPatterPlayground.DesignPatterns.Structural.Adapter.VectorRasterExample;
 using DesignPatterPlayground.SolidPrinciples;
 
@@ -61,7 +62,8 @@ namespace DesignPatterPlayground
         {
             // 1. Adapter
             //VectorRasterDemo.Run();
-            AdapterCaching.Run();
+            //AdapterCaching.Run();
+            GenericValueAdapter.Run();
         }
 
         #endregion
