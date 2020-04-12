@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility\BrokerChainExample\BrokerChain.cs" />
     <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility\MethodChainExample\MethodChain.cs" />
+    <Compile Include="DesignPatterns\Behavioral\StrategyPattern\DynamicStrategyExample\DynamicStrategy.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\Builder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FacetedBuilder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FluentBuilderInheritance.cs" />
