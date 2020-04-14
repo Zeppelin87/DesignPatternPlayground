@@ -3,6 +3,7 @@ using DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.Met
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.DynamicStrategyExample;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.EqualityComparisonStrategies;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.StaticStrategyExample;
+using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod;
 using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample;
@@ -36,25 +37,25 @@ namespace DesignPatterPlayground
 
         private static void Creational()
         {
-            // 1.Builder 
+            // 1.Builder. 
             Builder.Run();
             FluentBuilderInheritance.Run();
             FunctionalBuilder.Run();
             FacetedBuilder.Run();
 
-            // 2.Factory 
+            // 2.Factory. 
             FactoryMethod.Run();
             Factory.Run();
             InnerFactory.Run();
             AbstractFactory.Run();
 
-            // 3.Prototype 
+            // 3.Prototype. 
             ICloneableIsBad.Run();
             CopyConstructors.Run();
             ExplicitDeepCopyInterface.Run();
             CopyThroughSerialization.Run();
 
-            // 4.Singleton 
+            // 4.Singleton. 
             SingletonImplementation.Run();
             TestabilityIssues.Run();
             SingletonDependencyInjection.Run();
@@ -66,7 +67,7 @@ namespace DesignPatterPlayground
 
         private static void Structural()
         {
-            // 1. Adapter
+            // 1. Adapter.
             VectorRasterDemo.Run();
             AdapterCaching.Run();
             GenericValueAdapter.Run();
@@ -78,14 +79,17 @@ namespace DesignPatterPlayground
 
         private static void Behavioral()
         {
-            // 1. Chain of Responsibility
+            // 1. Chain of Responsibility.
             //MethodChain.Run();
             //BrokerChain.Run();
 
-            // 2. StrategyPattern
+            // 2. StrategyPattern.
             //DynamicStrategy.Run();
             //StaticStrategy.Run();
-            EqualityAndComparisonStrategies.Run();
+            //EqualityAndComparisonStrategies.Run();
+
+            // 3. Template Method.
+            TemplateMethodExample.Run();
         }
 
         #endregion
