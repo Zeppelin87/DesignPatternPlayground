@@ -4,6 +4,8 @@ using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.DynamicSt
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.EqualityComparisonStrategies;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.StaticStrategyExample;
 using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod;
+using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod.FunctionalTemplateMethodExample;
+using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod.TemplateMethodEx;
 using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample;
@@ -89,7 +91,8 @@ namespace DesignPatterPlayground
             //EqualityAndComparisonStrategies.Run();
 
             // 3. Template Method.
-            TemplateMethodExample.Run();
+            //TemplateMethodExample.Run();
+            FunctionalTemplateMethod.Run();
         }
 
         #endregion

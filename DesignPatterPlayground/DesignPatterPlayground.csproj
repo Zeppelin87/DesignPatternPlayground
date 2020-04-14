@@ -57,7 +57,8 @@
     <Compile Include="DesignPatterns\Behavioral\StrategyPattern\DynamicStrategyExample\DynamicStrategy.cs" />
     <Compile Include="DesignPatterns\Behavioral\StrategyPattern\EqualityComparisonStrategies\EqualityAndComparisonStrategies.cs" />
     <Compile Include="DesignPatterns\Behavioral\StrategyPattern\StaticStrategyExample\StaticStrategy.cs" />
-    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\TemplateMethodExample.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\FunctionalTemplateMethodExample\FunctionalTemplateMethod.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\TemplateMethodEx\TemplateMethodExample.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\Builder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FacetedBuilder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FluentBuilderInheritance.cs" />
