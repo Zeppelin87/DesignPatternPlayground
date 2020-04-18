@@ -1,5 +1,6 @@
 ﻿using DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.BrokerChainExample;
 using DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.MethodChainExample;
+using DesignPatterPlayground.DesignPatterns.Behavioral.State.ClassicImplementationExample;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.DynamicStrategyExample;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.EqualityComparisonStrategies;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.StaticStrategyExample;
@@ -92,7 +93,10 @@ namespace DesignPatterPlayground
 
             // 3. Template Method.
             //TemplateMethodExample.Run();
-            FunctionalTemplateMethod.Run();
+            //FunctionalTemplateMethod.Run();
+
+            // 4. State
+            ClassicImplementation.Run();
         }
 
         #endregion
