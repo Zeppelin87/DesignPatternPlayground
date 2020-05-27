@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample
+namespace DesignPatterPlayground.DesignPatterns.Creational.Factory
 {
-    public static class Factory
+    public static class FactoryExample
     {
         public static void Run()
         {

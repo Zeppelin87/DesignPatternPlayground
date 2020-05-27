@@ -4,16 +4,8 @@ using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern;
 using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod;
 using DesignPatterPlayground.DesignPatterns.Creational.Builder;
 using DesignPatterPlayground.DesignPatterns.Creational.Factory;
-using DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample;
-using DesignPatterPlayground.DesignPatterns.Creational.Factory.FactoryExample;
-using DesignPatterPlayground.DesignPatterns.Creational.Factory.InnerFactoryExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Prototype;
-using DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyConstructorsExample;
-using DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyThroughSerializationExample;
-using DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDeepCopyInterfaceExample;
-using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonDependencyInjectionExample;
-using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonImplementationExample;
-using DesignPatterPlayground.DesignPatterns.Creational.Singleton.TestabilityIssuesExample;
+using DesignPatterPlayground.DesignPatterns.Creational.Singleton;
 using DesignPatterPlayground.DesignPatterns.Structural.Adapter;
 using DesignPatterPlayground.SolidPrinciples;
 
@@ -44,8 +36,8 @@ namespace DesignPatterPlayground
 
             // 2.Factory. 
             FactoryMethod.Run();
-            Factory.Run();
-            InnerFactory.Run();
+            FactoryExample.Run();
+            InnerFactoryExample.Run();
             AbstractFactory.Run();
 
             // 3.Prototype. 

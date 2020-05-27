@@ -1,17 +1,18 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDeepCopyInterfaceExample
+namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype
 {
-    public static class ExplicitDeepCopyInterface
+    public static class CopyThroughSerialization
     {
         public static void Run()
         {
-            var address = new Address("Colorado Springs", "CO");
-            var rick = new User("Rick", "Kinch", address);
+            var address = new Address1("Colorado Springs", "CO");
+            var rick = new User1("Rick", "Kinch", address);
             Console.WriteLine(rick);
 
             // Use the `DeepCopy()` function found on `User`
-            var john = rick.DeepCopy();
+            var john = ExtensionMethods1.DeepCopy(rick);
             Console.WriteLine(john);
             Console.WriteLine();
 
@@ -25,16 +26,19 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDee
         }
     }
 
-    public interface IPrototype<T>
+    public static class ExtensionMethods1
     {
-        T DeepCopy();
+        public static T DeepCopy<T>(T self)
+        {
+            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(self));
+        }
     }
 
-    public class User : IPrototype<User>
+    public class User1
     {
-        public User() { }
+        public User1() { }
 
-        public User(string firstName, string lastName, Address address)
+        public User1(string firstName, string lastName, Address1 address)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -43,7 +47,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDee
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Address Address { get; set; }
+        public Address1 Address { get; set; }
 
         public override string ToString()
         {
@@ -51,18 +55,13 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDee
                 $" {nameof(LastName)}: {LastName}," +
                 $" {nameof(Address)}: {Address.ToString()}";
         }
-
-        public User DeepCopy()
-        {
-            return new User(FirstName, LastName, Address.DeepCopy());
-        }
     }
 
-    public class Address : IPrototype<Address>
+    public class Address1
     {
-        public Address() { }
+        public Address1() { }
 
-        public Address(string city, string state)
+        public Address1(string city, string state)
         {
             City = city;
             State = state;
@@ -74,11 +73,6 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDee
         public override string ToString()
         {
             return $"{nameof(City)}: {City}, {nameof(State)}: {State}";
-        }
-
-        public Address DeepCopy()
-        {
-            return new Address(City, State);
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonDependencyInjectionExample
+namespace DesignPatterPlayground.DesignPatterns.Creational.Singleton
 {
     public static class SingletonDependencyInjection
     {
@@ -87,7 +87,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonDe
             Console.WriteLine("Initializing database");
 
             // Stubbed out read from a 'database'.
-            capitals = File.ReadAllLines(@"DesignPatterns\Creational\Singleton\SingletonImplementationExample\Capitals.txt")
+            capitals = File.ReadAllLines(@"DesignPatterns\Creational\Singleton\Capitals.txt")
                 .Batch(2)
                 .ToDictionary(
                     list => list.ElementAt(0).Trim(),

@@ -1,18 +1,17 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyThroughSerializationExample
+namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype
 {
-    public static class CopyThroughSerialization
+    public static class CopyConstructors
     {
         public static void Run()
         {
-            var address = new Address("Colorado Springs", "CO");
-            var rick = new User("Rick", "Kinch", address);
+            var address = new Address3("Colorado Springs", "CO");
+            var rick = new User3("Rick", "Kinch", address);
             Console.WriteLine(rick);
 
-            // Use the `DeepCopy()` function found on `User`
-            var john = ExtensionMethods.DeepCopy(rick);
+            // Copy constructor called on object instantiation.
+            var john = new User3(rick);
             Console.WriteLine(john);
             Console.WriteLine();
 
@@ -26,28 +25,27 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyThrough
         }
     }
 
-    public static class ExtensionMethods
+    public class User3
     {
-        public static T DeepCopy<T>(T self)
-        {
-            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(self));
-        }
-    }
+        public User3() { }
 
-    public class User 
-    {
-        public User() { }
-
-        public User(string firstName, string lastName, Address address)
+        public User3(string firstName, string lastName, Address3 address)
         {
             FirstName = firstName;
             LastName = lastName;
             Address = address;
         }
 
+        public User3(User3 other)
+        {
+            FirstName = other.FirstName;
+            LastName = other.LastName;
+            Address = new Address3(other.Address);
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Address Address { get; set; }
+        public Address3 Address { get; set; }
 
         public override string ToString()
         {
@@ -57,14 +55,20 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyThrough
         }
     }
 
-    public class Address
+    public class Address3
     {
-        public Address() { }
+        public Address3() { }
 
-        public Address(string city, string state)
+        public Address3(string city, string state)
         {
             City = city;
             State = state;
+        }
+
+        public Address3(Address3 other)
+        {
+            City = other.City;
+            State = other.State;
         }
 
         public string City { get; set; }

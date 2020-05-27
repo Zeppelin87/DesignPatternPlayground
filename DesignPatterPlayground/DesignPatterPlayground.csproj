@@ -64,17 +64,17 @@
     <Compile Include="DesignPatterns\Creational\Builder\FacetedBuilder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FluentBuilderInheritance.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FunctionalBuilder.cs" />
-    <Compile Include="DesignPatterns\Creational\Factory\AbstractFactoryExample\AbstractFactory.cs" />
-    <Compile Include="DesignPatterns\Creational\Factory\FactoryExample\Factory.cs" />
+    <Compile Include="DesignPatterns\Creational\Factory\AbstractFactory.cs" />
+    <Compile Include="DesignPatterns\Creational\Factory\FactoryExample.cs" />
     <Compile Include="DesignPatterns\Creational\Factory\FactoryMethod.cs" />
-    <Compile Include="DesignPatterns\Creational\Factory\InnerFactoryExample\InnerFactory.cs" />
-    <Compile Include="DesignPatterns\Creational\Prototype\CopyConstructorsExample\CopyConstructors.cs" />
-    <Compile Include="DesignPatterns\Creational\Prototype\CopyThroughSerializationExample\CopyThroughSerialization.cs" />
-    <Compile Include="DesignPatterns\Creational\Prototype\ExplicitDeepCopyInterfaceExample\ExplicitDeepCopyInterface.cs" />
+    <Compile Include="DesignPatterns\Creational\Factory\InnerFactoryExample.cs" />
+    <Compile Include="DesignPatterns\Creational\Prototype\CopyConstructors.cs" />
+    <Compile Include="DesignPatterns\Creational\Prototype\CopyThroughSerialization.cs" />
+    <Compile Include="DesignPatterns\Creational\Prototype\ExplicitDeepCopyInterface.cs" />
     <Compile Include="DesignPatterns\Creational\Prototype\ICloneableIsBad.cs" />
-    <Compile Include="DesignPatterns\Creational\Singleton\SingletonDependencyInjectionExample\SingletonDependencyInjection.cs" />
-    <Compile Include="DesignPatterns\Creational\Singleton\SingletonImplementationExample\SingletonImplementation.cs" />
-    <Compile Include="DesignPatterns\Creational\Singleton\TestabilityIssuesExample\TestabilityIssues.cs" />
+    <Compile Include="DesignPatterns\Creational\Singleton\SingletonDependencyInjection.cs" />
+    <Compile Include="DesignPatterns\Creational\Singleton\SingletonImplementation.cs" />
+    <Compile Include="DesignPatterns\Creational\Singleton\TestabilityIssues.cs" />
     <Compile Include="DesignPatterns\Structural\Adapter\AdapterCaching.cs" />
     <Compile Include="DesignPatterns\Structural\Adapter\GenericValueAdapter.cs" />
     <Compile Include="DesignPatterns\Structural\Adapter\VectorRasterDemo.cs" />
@@ -91,13 +91,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DesignPatterns\Creational\Singleton\SingletonImplementationExample\Capitals.txt">
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DesignPatterns\Creational\Singleton\Capitals.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

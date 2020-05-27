@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample
+namespace DesignPatterPlayground.DesignPatterns.Creational.Factory
 {
     public static class AbstractFactory
     {
@@ -78,7 +78,7 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFacto
             foreach (AvailableDrink drink in Enum.GetValues(typeof(AvailableDrink)))
             {
                 var factory = (IHotDrinkFactory)Activator.CreateInstance(
-                    Type.GetType("DesignPatterPlayground.DesignPatterns.Creational.Factory.AbstractFactoryExample." + Enum.GetName(typeof(AvailableDrink), drink) + "Factory")
+                    Type.GetType("DesignPatterPlayground.DesignPatterns.Creational.Factory." + Enum.GetName(typeof(AvailableDrink), drink) + "Factory")
                     );
                 factories.Add(drink, factory);
             }

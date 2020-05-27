@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyConstructorsExample
+namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype
 {
-    public static class CopyConstructors
+    public static class ExplicitDeepCopyInterface
     {
         public static void Run()
         {
-            var address = new Address("Colorado Springs", "CO");
-            var rick = new User("Rick", "Kinch", address);
+            var address = new Address2("Colorado Springs", "CO");
+            var rick = new User2("Rick", "Kinch", address);
             Console.WriteLine(rick);
 
-            // Copy constructor called on object instantiation.
-            var john = new User(rick);
+            // Use the `DeepCopy()` function found on `User`
+            var john = rick.DeepCopy();
             Console.WriteLine(john);
             Console.WriteLine();
 
@@ -25,27 +25,25 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyConstru
         }
     }
 
-    public class User
+    public interface IPrototype<T>
     {
-        public User() { }
+        T DeepCopy();
+    }
 
-        public User(string firstName, string lastName, Address address)
+    public class User2 : IPrototype<User2>
+    {
+        public User2() { }
+
+        public User2(string firstName, string lastName, Address2 address)
         {
             FirstName = firstName;
             LastName = lastName;
             Address = address;
         }
 
-        public User(User other)
-        {
-            FirstName = other.FirstName;
-            LastName = other.LastName;
-            Address = new Address(other.Address);
-        }
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Address Address { get; set; }
+        public Address2 Address { get; set; }
 
         public override string ToString()
         {
@@ -53,22 +51,21 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyConstru
                 $" {nameof(LastName)}: {LastName}," +
                 $" {nameof(Address)}: {Address.ToString()}";
         }
+
+        public User2 DeepCopy()
+        {
+            return new User2(FirstName, LastName, Address.DeepCopy());
+        }
     }
 
-    public class Address
+    public class Address2 : IPrototype<Address2>
     {
-        public Address() { }
+        public Address2() { }
 
-        public Address(string city, string state)
+        public Address2(string city, string state)
         {
             City = city;
             State = state;
-        }
-
-        public Address(Address other)
-        {
-            City = other.City;
-            State = other.State;
         }
 
         public string City { get; set; }
@@ -78,6 +75,10 @@ namespace DesignPatterPlayground.DesignPatterns.Creational.Prototype.CopyConstru
         {
             return $"{nameof(City)}: {City}, {nameof(State)}: {State}";
         }
+
+        public Address2 DeepCopy()
+        {
+            return new Address2(City, State);
+        }
     }
 }
-
