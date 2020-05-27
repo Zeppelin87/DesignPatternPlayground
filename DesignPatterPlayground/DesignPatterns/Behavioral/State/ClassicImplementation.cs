@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Behavioral.State.ClassicImplementationExample
+namespace DesignPatterPlayground.DesignPatterns.Behavioral.State
 {
     // Modeling a light switch.
     // The light is either on or off.

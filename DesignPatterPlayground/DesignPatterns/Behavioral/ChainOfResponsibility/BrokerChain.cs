@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.BrokerChainExample
+namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
 {
     public static class BrokerChain
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.StaticStrategyExample
+namespace DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern
 {
     public static class StaticStrategy
     {
@@ -21,7 +21,7 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.Stati
 
     // This generic approach is used instead of D.I.
     // Note: D.I. would be used here in the real world.
-    public class TextProcessor<T> where T: IListStrategy, new ()
+    public class TextProcessor<T> where T : IListStrategy, new()
     {
         private StringBuilder sb = new StringBuilder();
         private IListStrategy listStrategy = new T();

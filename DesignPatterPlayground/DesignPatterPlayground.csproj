@@ -52,14 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility\BrokerChainExample\BrokerChain.cs" />
-    <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility\MethodChainExample\MethodChain.cs" />
-    <Compile Include="DesignPatterns\Behavioral\State\ClassicImplementationExample\ClassicImplementation.cs" />
-    <Compile Include="DesignPatterns\Behavioral\StrategyPattern\DynamicStrategyExample\DynamicStrategy.cs" />
-    <Compile Include="DesignPatterns\Behavioral\StrategyPattern\EqualityComparisonStrategies\EqualityAndComparisonStrategies.cs" />
-    <Compile Include="DesignPatterns\Behavioral\StrategyPattern\StaticStrategyExample\StaticStrategy.cs" />
-    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\FunctionalTemplateMethodExample\FunctionalTemplateMethod.cs" />
-    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\TemplateMethodEx\TemplateMethodExample.cs" />
+    <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility\BrokerChain.cs" />
+    <Compile Include="DesignPatterns\Behavioral\ChainOfResponsibility\MethodChain.cs" />
+    <Compile Include="DesignPatterns\Behavioral\State\ClassicImplementation.cs" />
+    <Compile Include="DesignPatterns\Behavioral\StrategyPattern\DynamicStrategy.cs" />
+    <Compile Include="DesignPatterns\Behavioral\StrategyPattern\EqualityAndComparisonStrategies.cs" />
+    <Compile Include="DesignPatterns\Behavioral\StrategyPattern\StaticStrategy.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\FunctionalTemplateMethod.cs" />
+    <Compile Include="DesignPatterns\Behavioral\TemplateMethod\TemplateMethodExample.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\Builder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FacetedBuilder.cs" />
     <Compile Include="DesignPatterns\Creational\Builder\FluentBuilderInheritance.cs" />
@@ -87,7 +87,7 @@
     <Compile Include="SolidPrinciples\SingleResponsibilityPrinciple.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="SolidPrinciples\App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

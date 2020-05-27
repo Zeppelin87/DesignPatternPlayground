@@ -1,24 +1,24 @@
 ﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility.MethodChainExample
+namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
 {
     public static class MethodChain
     {
         public static void Run()
         {
-            var goblin = new Creature("Goblin", 2, 2);
+            var goblin = new Creature1("Goblin", 2, 2);
             Console.WriteLine(goblin);
 
-            var root = new CreatureModifier(goblin);
+            var root = new CreatureModifier1(goblin);
 
             // Stops chain of command since Handle() doesn't call base.Handle()
             //root.Add(new NoBonusesModifier(goblin));
 
             Console.WriteLine("Let's double goblin's attack...");
-            root.Add(new DoubleAttackModifier(goblin));
+            root.Add(new DoubleAttackModifier1(goblin));
 
             Console.WriteLine("Let's increase goblin's defense");
-            root.Add(new IncreaseDefenseModifier(goblin));
+            root.Add(new IncreaseDefenseModifier1(goblin));
 
             // eventually...
             root.Handle();
@@ -26,12 +26,12 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
         }
     }
 
-    public class Creature
+    public class Creature1
     {
         public string Name;
         public int Attack, Defense;
 
-        public Creature(string name, int attack, int defense)
+        public Creature1(string name, int attack, int defense)
         {
             Name = name;
             Attack = attack;
@@ -47,17 +47,17 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
     }
 
     // Facilitates Chain of Responsibility desing pattern.
-    public class CreatureModifier
+    public class CreatureModifier1
     {
-        protected Creature creature;
-        protected CreatureModifier next; // Building a linked list.
+        protected Creature1 creature;
+        protected CreatureModifier1 next; // Building a linked list.
 
-        public CreatureModifier(Creature creature)
+        public CreatureModifier1(Creature1 creature)
         {
             this.creature = creature;
         }
 
-        public void Add(CreatureModifier cm)
+        public void Add(CreatureModifier1 cm)
         {
             if (next != null)
             {
@@ -72,9 +72,9 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
         public virtual void Handle() => next?.Handle();
     }
 
-    public class NoBonusesModifier : CreatureModifier
+    public class NoBonusesModifier1 : CreatureModifier1
     {
-        public NoBonusesModifier(Creature creature) : base(creature)
+        public NoBonusesModifier1(Creature1 creature) : base(creature)
         {
         }
 
@@ -85,9 +85,9 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
         }
     }
 
-    public class DoubleAttackModifier : CreatureModifier
+    public class DoubleAttackModifier1 : CreatureModifier1
     {
-        public DoubleAttackModifier(Creature creature) : base(creature)
+        public DoubleAttackModifier1(Creature1 creature) : base(creature)
         {
         }
 
@@ -99,9 +99,9 @@ namespace DesignPatterPlayground.DesignPatterns.Behavioral.ChainOfResponsibility
         }
     }
 
-    public class IncreaseDefenseModifier : CreatureModifier
+    public class IncreaseDefenseModifier1 : CreatureModifier1
     {
-        public IncreaseDefenseModifier(Creature creature) : base(creature)
+        public IncreaseDefenseModifier1(Creature1 creature) : base(creature)
         {
         }
 

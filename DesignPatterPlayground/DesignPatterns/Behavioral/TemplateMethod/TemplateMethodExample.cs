@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod.TemplateMethodEx
+namespace DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod
 {
     public static class TemplateMethodExample
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.EqualityComparisonStrategies
+namespace DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern
 {
     public static class EqualityAndComparisonStrategies
     {
