@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterPlayground.DesignPatterns.Structural.Adapter.GenericValueAdapterExample
+namespace DesignPatterPlayground.DesignPatterns.Structural.Adapter
 {
     public static class GenericValueAdapter
     {

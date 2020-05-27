@@ -4,7 +4,6 @@ using DesignPatterPlayground.DesignPatterns.Behavioral.State.ClassicImplementati
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.DynamicStrategyExample;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.EqualityComparisonStrategies;
 using DesignPatterPlayground.DesignPatterns.Behavioral.StrategyPattern.StaticStrategyExample;
-using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod;
 using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod.FunctionalTemplateMethodExample;
 using DesignPatterPlayground.DesignPatterns.Behavioral.TemplateMethod.TemplateMethodEx;
 using DesignPatterPlayground.DesignPatterns.Creational.Builder;
@@ -19,9 +18,7 @@ using DesignPatterPlayground.DesignPatterns.Creational.Prototype.ExplicitDeepCop
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonDependencyInjectionExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.SingletonImplementationExample;
 using DesignPatterPlayground.DesignPatterns.Creational.Singleton.TestabilityIssuesExample;
-using DesignPatterPlayground.DesignPatterns.Structural.Adapter.AdapterCachingExample;
-using DesignPatterPlayground.DesignPatterns.Structural.Adapter.GenericValueAdapterExample;
-using DesignPatterPlayground.DesignPatterns.Structural.Adapter.VectorRasterExample;
+using DesignPatterPlayground.DesignPatterns.Structural.Adapter;
 using DesignPatterPlayground.SolidPrinciples;
 
 namespace DesignPatterPlayground
@@ -30,9 +27,12 @@ namespace DesignPatterPlayground
     {
         static void Main(string[] args)
         {
-            //SOLIDPrinciples();
-            //Creational();
-            //Structural();
+            // Desing Principles
+            SOLIDPrinciples();
+
+            // Design Patterns 
+            Creational();
+            Structural();
             Behavioral();
         }
 
@@ -83,17 +83,17 @@ namespace DesignPatterPlayground
         private static void Behavioral()
         {
             // 1. Chain of Responsibility.
-            //MethodChain.Run();
-            //BrokerChain.Run();
+            MethodChain.Run();
+            BrokerChain.Run();
 
             // 2. StrategyPattern.
-            //DynamicStrategy.Run();
-            //StaticStrategy.Run();
-            //EqualityAndComparisonStrategies.Run();
+            DynamicStrategy.Run();
+            StaticStrategy.Run();
+            EqualityAndComparisonStrategies.Run();
 
             // 3. Template Method.
-            //TemplateMethodExample.Run();
-            //FunctionalTemplateMethod.Run();
+            TemplateMethodExample.Run();
+            FunctionalTemplateMethod.Run();
 
             // 4. State
             ClassicImplementation.Run();

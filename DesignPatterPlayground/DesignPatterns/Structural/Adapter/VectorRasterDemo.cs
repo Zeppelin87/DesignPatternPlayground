@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace DesignPatterPlayground.DesignPatterns.Structural.Adapter.VectorRasterExample
+namespace DesignPatterPlayground.DesignPatterns.Structural.Adapter
 {
     public static class VectorRasterDemo
     {
@@ -57,7 +57,7 @@ namespace DesignPatterPlayground.DesignPatterns.Structural.Adapter.VectorRasterE
         {
             this.Start = start;
             this.End = end;
-        }        
+        }
     }
 
     // A VectorObject is just a list of lines.
