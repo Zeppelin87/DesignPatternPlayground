@@ -1,2 +1,2 @@
 
-- [wiki for more info](https://github.com/Zeppelin87/DesignPatternPlayground/wiki)
+- [See Wiki](https://github.com/Zeppelin87/DesignPatternPlayground/wiki)
